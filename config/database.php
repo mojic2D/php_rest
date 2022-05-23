@@ -1,10 +1,10 @@
 <?php
 class Database {
 
-    private $db_host = 'localhost';
+    private $db_host = 'studentska-baza.cm4gaef6uauk.us-east-1.rds.amazonaws.com';
     private $db_name = 'studentski_portal_db';
     private $username = 'root';
-    private $password = '';
+    private $password = 'alfa123!';
     private $con;
 
     public function connect() {
