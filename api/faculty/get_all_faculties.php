@@ -53,10 +53,10 @@ if($is_valid){
             extract($row);
   
             $faculty_item = array(
-                'id' => $id,
-                'name' => $name,
+                'id' => intval($id),
+                'name' => utf8_encode($name),
                 'parentShortName' => $parentShortName,
-                'ects' => $ects
+                'ects' => intval($ects)
             );
         
             array_push($faculty_arr, $faculty_item);
