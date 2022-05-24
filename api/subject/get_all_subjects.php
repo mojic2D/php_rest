@@ -25,14 +25,14 @@ if($is_valid){
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
             $subject_item = array(
-                'id' => $id,
-                'name' => $name,
-                'faculty' => $faculty,
-                'year' => $year,
-                'professor' => $professor,
-                'professor_id'=>$professor_id,
-                'ects' => $ects,
-                'active' => $active
+                'id' => intval($id),
+                'name' => utf8_encode($name),
+                'faculty' => intval($faculty),
+                'year' => intval($year),
+                'professor' => utf8_encode($professor),
+                'professor_id'=> intval($professor_id),
+                'ects' => intval($ects),
+                'active' => intval($active)
             );
             array_push($subjects_arr, $subject_item);
         }
