@@ -28,8 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-echo "You have CORS!";
-
 
 include_once '../../config/database.php';
 include_once '../../models/faculty.php';
