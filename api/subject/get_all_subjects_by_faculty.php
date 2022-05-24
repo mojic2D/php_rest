@@ -25,7 +25,7 @@ if($is_valid){
 
         $sss='0';
         while($row = $result -> fetch(PDO::FETCH_ASSOC)) {
-            $sss=$sss.$id;
+            $sss=$sss.'  '. $name;
             extract($row);
             $subject_item = array(
                 'id' => $id,
