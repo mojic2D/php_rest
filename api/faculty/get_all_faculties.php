@@ -3,7 +3,9 @@
 header('Access-Control-Allow-Origin: *');
 header ('Content-Type: application/json');
 header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: *');
+// header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token , Authorization');
+header('Access-Control-Max-Age: 86400');
 
 
 include_once '../../config/database.php';
