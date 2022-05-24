@@ -21,9 +21,11 @@ if($is_valid){
 
     if($num > 0){
         $subjects_arr = array();
-        // $subjects_arr = array();
+        $subjects_arr = array();
 
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        $sss='0';
+        while($row = $result -> fetch(PDO::FETCH_ASSOC)) {
+            $sss=$sss.$id;
             extract($row);
             $subject_item = array(
                 'id' => $id,
@@ -31,19 +33,21 @@ if($is_valid){
                 'faculty' => $faculty,
                 'year' => $year,
                 'professor' => $professor,
-                'professor_id' =>$professor_id,
+                'professor_id' => $professor_id,
                 'estc' => $ects,
                 'active' => $active,
-			    'faculty' =>$facultyName,
-			    'parentShortName' =>$parentShortName
-            );
+			    'faculty' => $facultyName,
+			    'parentShortName' => $parentShortName
+                  );
             array_push($subjects_arr, $subject_item);
-        }        
+        }
+        echo $sss;
         echo json_encode($subjects_arr);
         http_response_code(200);
     } else {
         http_response_code(204);
-    }
+    };
+           
 }else{
     http_response_code(401);
 }
