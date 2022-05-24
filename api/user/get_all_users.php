@@ -25,12 +25,12 @@ if($is_valid){
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
             $user_item = array(
-                'id' => $id,
-                'username' => $username,
-                'role' => $role,
-                'active' => $active,
+                'id' => intval($id),
+                'username' => utf8_encode($username),
+                'role' => utf8_encode($role),
+                'active' => intval($active),
                 'createdAt' => $createdAt,
-			    'name' => $name
+			    'name' => utf8_encode($name)
             );
             array_push($users_arr, $user_item);
         }
