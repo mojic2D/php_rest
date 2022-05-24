@@ -23,26 +23,22 @@ if($is_valid){
         $subjects_arr = array();
         $subjects_arr = array();
 
-        $sss='0';
         while($row = $result -> fetch(PDO::FETCH_ASSOC)) {
             extract($row);
             $subject_item = array(
                 'id' => $id,
-                //'name' => $name,
-                'faculty' => $faculty,
+                'name' => utf8encode($name),
+                'faculty' => utf8encode($faculty),
                 'year' => $year,
-               // 'professor' => $professor,
+                'professor' => utf8encode($professor),
                 'professor_id' => $professor_id,
                 'estc' => $ects,
                 'active' => $active,
-			    //'faculty' => $facultyName,
+			    'faculty' => utf8encode($facultyName),
 			    'parentShortName' => $parentShortName
                   );
             array_push($subjects_arr, $subject_item);
-            
-            $sss= $subject_item;
         }
-        echo json_encode($sss);
         echo json_encode($subjects_arr);
         http_response_code(200);
     } else {
