@@ -27,12 +27,12 @@ if($is_valid){
             extract($row);
   
             $files_item = array(
-                'id' => $id,
-                'name' => $name,
-                'createdBy' => $createdBy,
+                'id' => intval($id),
+                'name' => utf8_encode($name),
+                'createdBy' => intval($createdBy),
                 'createdAt' => $createdAt,
-                'subject' => $subject,
-			    'isResults' => $isResults
+                'subject' => intval($subject),
+			    'isResults' => intval($isResults)
             );
         
         array_push($files_arr, $files_item);
