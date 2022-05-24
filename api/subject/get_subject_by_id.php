@@ -19,7 +19,7 @@ if($is_valid){
 
     if($subject -> get_subject_by_id()){
         $subject_arr = array(
-            'id' => $subject -> id,
+            'id' => intval($subject -> id),
             'name' => utf8_encode($subject -> name),
             'faculty' => $subject -> faculty,
             'year' => $subject -> year,
