@@ -28,14 +28,14 @@ if($is_valid){
             extract($row);
             $subject_item = array(
                 'id' => $id,
-                'name' => $name,
+                //'name' => $name,
                 'faculty' => $faculty,
                 'year' => $year,
-                'professor' => $professor,
+               // 'professor' => $professor,
                 'professor_id' => $professor_id,
                 'estc' => $ects,
                 'active' => $active,
-			    'faculty' => $facultyName,
+			    //'faculty' => $facultyName,
 			    'parentShortName' => $parentShortName
                   );
             array_push($subjects_arr, $subject_item);
