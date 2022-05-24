@@ -26,20 +26,20 @@ if($is_valid){
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
             $subject_item = array(
-                'id' 				=> $id,
-                'name' 				=> $name,
-                'faculty' 			=> $faculty,
-                'year' 				=> $year,
-                'professor' 		=> $professor,
-                'professor_id'		=>$professor_id,
-                'estc' 				=> $ects,
-                'active' 			=> $active,
-			    'faculty'			=>$facultyName,
-			    'parentShortName'	=>$parentShortName
+                'id' => $id,
+                'name' => $name,
+                'faculty' => $faculty,
+                'year' => $year,
+                'professor' => $professor,
+                'professor_id' =>$professor_id,
+                'estc' => $ects,
+                'active' => $active,
+			    'faculty' =>$facultyName,
+			    'parentShortName' =>$parentShortName
             );
             array_push($subjects_arr, $subject_item);
         }        
-        echo $subjects_arr;
+        echo json_encode($subjects_arr);
         http_response_code(200);
     } else {
         http_response_code(204);
