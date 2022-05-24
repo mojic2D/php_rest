@@ -2,6 +2,9 @@
 
 header('Access-Control-Allow-Origin: *');
 header ('Content-Type: application/json');
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: *');
+
 
 include_once '../../config/database.php';
 include_once '../../models/faculty.php';
