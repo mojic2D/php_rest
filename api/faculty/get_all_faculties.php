@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: http://studentportalfrontend.s3-website-us-
 header ('Content-Type: application/json');
 header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 // header('Access-Control-Allow-Headers: *');
-header('Access-Control-Allow-Headers: *');
+header ('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 header('Access-Control-Max-Age: 86400');
 
 
