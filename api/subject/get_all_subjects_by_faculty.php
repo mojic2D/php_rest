@@ -39,8 +39,7 @@ if($is_valid){
             );
             array_push($subjects_arr, $subject_item);
         }        
-        echo '1231232131321'.json_encode($subjects_arr);
-        echo json_encode($subjects_arr);
+        echo $subjects_arr;
         http_response_code(200);
     } else {
         http_response_code(204);
