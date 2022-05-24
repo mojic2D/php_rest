@@ -25,7 +25,6 @@ if($is_valid){
 
         $sss='0';
         while($row = $result -> fetch(PDO::FETCH_ASSOC)) {
-            $sss=$sss.'  '. $name;
             extract($row);
             $subject_item = array(
                 'id' => $id,
@@ -40,6 +39,8 @@ if($is_valid){
 			    'parentShortName' => $parentShortName
                   );
             array_push($subjects_arr, $subject_item);
+            
+            $sss=$sss.'  '. $subject_item;
         }
         echo $sss;
         echo json_encode($subjects_arr);
