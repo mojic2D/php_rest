@@ -40,9 +40,9 @@ if($is_valid){
                   );
             array_push($subjects_arr, $subject_item);
             
-            $sss=$sss.'  '. $subject_item;
+            $sss= $subject_item;
         }
-        echo $sss;
+        echo json_encode($sss);
         echo json_encode($subjects_arr);
         http_response_code(200);
     } else {
