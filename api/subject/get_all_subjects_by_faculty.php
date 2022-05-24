@@ -21,7 +21,7 @@ if($is_valid){
 
     if($num > 0){
         $subjects_arr = array();
-        $subjects_arr = array();
+        // $subjects_arr = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
