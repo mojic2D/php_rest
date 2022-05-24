@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost','root','alfa123!','studentski_portal_db');
+$connection = mysqli_connect('studentska-baza.cm4gaef6uauk.us-east-1.rds.amazonaws.com','root','alfa123!','studentski_portal_db');
 $tables = array();
 
 include_once '../../config/authentication.php';
