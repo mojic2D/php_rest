@@ -54,7 +54,7 @@ if($is_valid){
   
             $faculty_item = array(
                 'id' => intval($id),
-                'name' => utf8_encode($name),
+                'name' => $name,
                 'parentShortName' => $parentShortName,
                 'ects' => intval($ects)
             );
