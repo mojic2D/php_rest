@@ -19,9 +19,9 @@ $user -> login();
 
 if(property_exists($user, 'name')){
 	$user_arr = array(
-		'id' 		=> $user -> id,
+		'id' 		=> intval($user -> id),
 		'role' 		=> $user -> role,
-		'active' 	=> $user -> active,
+		'active' 	=> intval($user -> active),
 		'name' 		=> $user -> name
 	);
 };
