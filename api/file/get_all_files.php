@@ -27,10 +27,10 @@ if($is_valid){
   
             $files_item = array(
                 'id' => intval($id),
-                'name' => utf8_encode($name),
-                'createdBy' => utf8_encode($createdBy),
+                'name' => $name,
+                'createdBy' => $createdBy,
                 'createdAt' => $createdAt,
-                'subject' => utf8_encode($subject),
+                'subject' => $subject,
 			    'isResults' => intval($isResults)
             );
         

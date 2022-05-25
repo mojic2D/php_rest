@@ -27,14 +27,14 @@ if($is_valid){
             extract($row);
             $subject_item = array(
                 'id' => intval($id),
-                'name' => utf8_encode($name),
-                'faculty' => utf8_encode($faculty),
+                'name' => $name,
+                'faculty' => $faculty,
                 'year' => intval($year),
-                'professor' => utf8_encode($professor),
+                'professor' => $professor,
                 'professor_id' => intval($professor_id),
                 'estc' => intval($ects),
                 'active' => intval($active),
-			    'faculty' => utf8_encode($facultyName),
+			    'faculty' => $facultyName,
 			    'parentShortName' => $parentShortName
                   );
             array_push($subjects_arr, $subject_item);

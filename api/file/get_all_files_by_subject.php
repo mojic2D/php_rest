@@ -28,7 +28,7 @@ if($is_valid){
   
             $files_item = array(
                 'id' => intval($id),
-                'name' => utf8_encode($name),
+                'name' => $name,
                 'createdBy' => intval($createdBy),
                 'createdAt' => $createdAt,
                 'subject' => intval($subject),

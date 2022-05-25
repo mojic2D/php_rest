@@ -26,11 +26,11 @@ if($is_valid){
             extract($row);
             $user_item = array(
                 'id' => intval($id),
-                'username' => utf8_encode($username),
-                'role' => utf8_encode($role),
+                'username' => $username,
+                'role' => $role,
                 'active' => intval($active),
                 'createdAt' => $createdAt,
-			    'name' => utf8_encode($name)
+			    'name' => $name
             );
             array_push($users_arr, $user_item);
         }

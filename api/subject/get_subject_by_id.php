@@ -20,14 +20,14 @@ if($is_valid){
     if($subject -> get_subject_by_id()){
         $subject_arr = array(
             'id' => intval($subject -> id),
-            'name' => utf8_encode($subject -> name),
+            'name' => $subject -> name,
             'faculty' => $subject -> faculty,
             'year' => $subject -> year,
-            'professor' => utf8_encode($subject -> professor),
+            'professor' => $subject -> professor,
 	        'professor_id'=>$subject ->professor_id,
             'ects' => $subject -> ects,
             'active' => $subject -> active,
-	        'faculty'=> utf8_encode($subject -> facultyName),
+	        'faculty'=> $subject -> facultyName,
 	        'parentShortName'=> $subject -> parentShortName
         );
         echo(json_encode($subject_arr));
